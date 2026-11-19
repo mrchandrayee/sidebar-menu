@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a8b6ce">
+  <title>Sidebar Menu — MZCode Recreation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <div class="tags"><span>#MZcode</span><span>#HTML</span><span>#CSS</span></div>
+    <header class="heading">
+      <p class="eyebrow">INTERACTIVE UI COMPONENT</p>
+      <h1>Sidebar Menu</h1>
+      <p class="subtitle">A simple expandable navigation panel</p>
+    </header>
+
+    <section class="demo-shell" aria-label="Sidebar navigation demo">
+      <aside class="sidebar" id="sidebar">
+        <button class="collapse-toggle" id="collapseToggle" aria-label="Collapse sidebar" title="Collapse sidebar">
+          <span class="toggle-icon">‹</span>
+        </button>
+        <nav class="nav-list" aria-label="Main navigation">
+          <button class="nav-item active" data-page="Home" aria-current="page">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+            </span><span class="nav-label">Home</span>
+          </button>
+          <button class="nav-item" data-page="About">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg>
+            </span><span class="nav-label">About</span>
+          </button>
+          <button class="nav-item" data-page="Services">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="m8 12 2.5 2.5L16 9"/></svg>
+            </span><span class="nav-label">Services</span>
+          </button>
+          <button class="nav-item" data-page="Contact">
+            <span class="nav-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M7.5 17c.8-2.3 2.3-3.5 4.5-3.5s3.7 1.2 4.5 3.5"/></svg>
+            </span><span class="nav-label">Contact</span>
+          </button>
+        </nav>
+        <div class="sidebar-bottom"><span class="status-dot"></span><span class="nav-label">Online</span></div>
+      </aside>
+
+      <section class="content-panel" id="contentPanel" aria-live="polite">
+        <div class="content-top">
+          <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+          <span class="content-breadcrumb">WORKSPACE <span>/</span> <b id="crumb">HOME</b></span>
+          <span class="profile">JD</span>
+        </div>
+        <div class="content-body">
+          <div class="content-icon" id="contentIcon">⌂</div>
+          <p class="content-kicker">WELCOME BACK</p>
+          <h2 id="contentTitle">Home</h2>
+          <p id="contentDescription">Your dashboard is ready. Choose a section from the sidebar to explore.</p>
+          <div class="content-cards">
+            <div><span>OVERVIEW</span><b>01</b></div>
+            <div><span>ACTIVITY</span><b>24</b></div>
+            <div><span>STATUS</span><b>Active</b></div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <p class="credit">See full video on YouTube channel: <strong>@mzcode01</strong></p>
+
+    <section class="code-section">
+      <article class="code-card">
+        <div class="code-head"><span class="window-dots"><i></i><i></i><i></i></span><b>HTML</b><button class="copy" data-copy="htmlCode">COPY</button></div>
+        <pre><code id="htmlCode">&lt;div class="container"&gt;
+  &lt;div class="sidebar"&gt;
+    &lt;nav&gt;...&lt;/nav&gt;
+  &lt;/div&gt;
+  &lt;main class="content"&gt;...&lt;/main&gt;
+&lt;/div&gt;</code></pre>
+      </article>
+      <article class="code-card">
+        <div class="code-head"><span class="window-dots"><i></i><i></i><i></i></span><b>CSS</b><button class="copy" data-copy="cssCode">COPY</button></div>
+        <pre><code id="cssCode">.sidebar {
+  width: 60px;
+  height: 100%;
+  background-color: #1877f2;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 5px 0 0 5px;
+  transition: width .75s ease;
+}</code></pre>
+      </article>
+      <article class="code-card">
+        <div class="code-head"><span class="window-dots"><i></i><i></i><i></i></span><b>JAVASCRIPT</b><button class="copy" data-copy="jsCode">COPY</button></div>
+        <pre><code id="jsCode">const sidebar = document.querySelector('.sidebar');
+
+document.querySelector('#collapseToggle')
+  .addEventListener('click', () =&gt; {
+    sidebar.classList.toggle('collapsed');
+  });</code></pre>
+      </article>
+    </section>
+    <p class="source-note">The CSS snippet above is transcribed from the visible video frame. Additional markup, styles and interactions complete the runnable recreation.</p>
+  </main>
+  <div class="toast" id="toast">Copied to clipboard</div>
+  <script src="app.js"></script>
+</body>
+</html>
